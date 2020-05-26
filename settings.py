@@ -1,4 +1,4 @@
-from math import pi
+from math import pi, tan
 
 
 # game setting
@@ -10,9 +10,9 @@ FPS = 60
 TILE = 100
 
 # player settings
-player_pos = (HALF_WIDTH, HALF_HEIGHT)
-player_angle = 0
+player_pos = complex(HALF_WIDTH, HALF_HEIGHT)
 player_speed = 2
+player_angle = 0
 
 #ray casting settings
 FOV = pi / 3
@@ -20,6 +20,9 @@ HALF_FOV = FOV / 2
 NUM_RAYS = 120
 MAX_DEPTH = 800
 DELTA_ANGLE = FOV / NUM_RAYS
+DIST = NUM_RAYS / (2 * tan(HALF_FOV)) # растояние от глаза до проекции
+PROJ_COEFF = 3 * DIST * TILE
+SCALE = WIDTH // NUM_RAYS
 
 # colors
 WHITE = (255, 255, 255)
