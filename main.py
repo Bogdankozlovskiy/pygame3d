@@ -21,12 +21,5 @@ while True:
 
 	ray_casting(sc, player.pos, player.angle)
 
-	# pygame.draw.circle(sc, GREEN, player.pos, 12)
-	# pygame.draw.line(sc, GREEN, player.pos, (player.x + WIDTH * cos(player.angle),
-	# 										 player.y + WIDTH * sin(player.angle)))
-
-	# for x, y in world_map:
-	# 	pygame.draw.rect(sc, DARK_GRAY, (x, y, TILE, TILE), 2)
-
 	pygame.display.update()
 	clock.tick(FPS)
