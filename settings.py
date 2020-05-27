@@ -17,11 +17,11 @@ player_angle = 0
 #ray casting settings
 FOV = pi / 3
 HALF_FOV = FOV / 2
-NUM_RAYS = 120
+NUM_RAYS = 1200
 MAX_DEPTH = 800
 DELTA_ANGLE = FOV / NUM_RAYS
 DIST = NUM_RAYS / (2 * tan(HALF_FOV)) # растояние от глаза до проекции
-PROJ_COEFF = 3 * DIST * TILE
+PROJ_COEFF = DIST * TILE
 SCALE = WIDTH // NUM_RAYS
 
 # colors
