@@ -19,7 +19,7 @@ def get_ray(player_pos, player_angle, world_map, TILE, HALF_FOV, SCALE, HALF_HEI
 	depthes_for_angles = depthes_for_index.astype(angles_sin_a.dtype).reshape((1, -1))
 	yes = (angles_sin_a.reshape((-1, 1)) @ depthes_for_angles + yo) // TILE * TILE
 	xes = (angles_cos_a.reshape((-1, 1)) @ depthes_for_angles + xo) // TILE * TILE
-	ready_depthes = 
+
 
 	out = List()
 	for ray in arange(NUM_RAYS):
